@@ -14,27 +14,28 @@ This project is built with Expo React Native and can be run locally using the Ex
 
 ### Marketplace
 
-![Marketplace](./screenshots/marketplace.png)
+<img width="955" height="524" alt="{C1886C4D-E07F-4601-B958-0937E669770E}" src="https://github.com/user-attachments/assets/1aa14abb-d979-4c92-8426-9d89e43bb094" />
+
 
 ### Product Details
 
-![Product Details](./screenshots/product-details.png)
+<img width="946" height="507" alt="{2353B8FD-5446-4D20-8548-EEBB74B89E4C}" src="https://github.com/user-attachments/assets/41a2a554-6396-4f7f-81eb-4b7a39237ce7" />
+
 
 ### EMI Selection
 
-![EMI Selection](./screenshots/emi-selection.png)
+<img width="959" height="505" alt="{FFE96032-D867-4A41-B162-49D7122869AA}" src="https://github.com/user-attachments/assets/5cb51806-7712-4a6a-bb8f-a143822bc60d" />
+
 
 ### Checkout
 
-![Checkout](./screenshots/checkout.png)
+<img width="959" height="514" alt="{D0379E6F-1267-44F0-8FB7-27B54B642736}" src="https://github.com/user-attachments/assets/ed63d22f-26d2-4e67-88b2-f045597e4d08" />
 
-### Payment
-
-![Payment](./screenshots/payment.png)
 
 ### Payment Success
 
-![Payment Success](./screenshots/payment-success.png)
+<img width="960" height="514" alt="{85D87803-E2B7-485D-8DEE-0EDB9AEE3AA9}" src="https://github.com/user-attachments/assets/4053ca3a-0797-4a05-bab9-45c827f8e1ba" />
+
 
 ## ✨ Features
 
