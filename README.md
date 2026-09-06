@@ -1,56 +1,266 @@
-# Welcome to your Expo app 👋
+# 1Fi Marketplace — SDE Intern Assignment
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A focused React Native implementation of the **1Fi Marketplace** experience, built as part of the SDE Intern assignment.
 
-## Get started
+The project demonstrates a clean mobile-first shopping flow where users can browse products, search and filter by category, view product details, select variants and EMI plans, proceed through a payment interface, and receive a successful payment confirmation.
 
-1. Install dependencies
+## 🚀 Live Project
 
-   ```bash
-   npm install
-   ```
+This project is built with Expo React Native and can be run locally using the Expo development server.
 
-2. Start the app
+## 📱 Screenshots
 
-   ```bash
-   npx expo start
-   ```
+> Add screenshots of the actual application here.
 
-In the output, you'll find options to open the app in a
+### Marketplace
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+![Marketplace](./screenshots/marketplace.png)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Product Details
 
-## Get a fresh project
+![Product Details](./screenshots/product-details.png)
 
-When you're ready, run:
+### EMI Selection
 
-```bash
-npm run reset-project
-```
+![EMI Selection](./screenshots/emi-selection.png)
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Checkout
 
-### Other setup steps
+![Checkout](./screenshots/checkout.png)
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### Payment
 
-## Learn more
+![Payment](./screenshots/payment.png)
 
-To learn more about developing your project with Expo, look at the following resources:
+### Payment Success
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+![Payment Success](./screenshots/payment-success.png)
 
-## Join the community
+## ✨ Features
 
-Join our community of developers creating universal apps.
+### Marketplace
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Clean and responsive marketplace interface
+- Product search
+- Category-based filtering
+- Featured products section
+- Product cards with images, pricing and EMI information
+- Responsive layout for different screen sizes
+- Empty state when no products match the search
+
+### Product Details
+
+- Product image and information
+- Product pricing
+- Available product variants
+- EMI plan selection
+- Dynamic monthly EMI calculation
+- No-cost EMI presentation
+- Proceed with EMI CTA
+
+### Checkout & Payment
+
+- Selected product and variant summary
+- Selected EMI tenure
+- Monthly EMI summary
+- Payment method selection
+- Mutual Fund Balance option
+- UPI option
+- Net Banking option
+- Secure transaction messaging
+- Payment confirmation screen
+- Order confirmation summary
+
+## 🛒 Marketplace Flow
+
+```text
+Marketplace
+     ↓
+Search / Category Filter
+     ↓
+Product Details
+     ↓
+Select Variant
+     ↓
+Select EMI Plan
+     ↓
+Proceed with EMI
+     ↓
+Checkout
+     ↓
+Select Payment Method
+     ↓
+Payment
+     ↓
+Payment Successful
+🧩 Project Structure
+src/
+├── app/
+│   ├── _layout.tsx
+│   ├── marketplace/
+│   │   ├── index.tsx
+│   │   ├── [id].tsx
+│   │   ├── checkout.tsx
+│   │   ├── payment.tsx
+│   │   └── success.tsx
+│   ├── index.tsx
+│   └── ...
+│
+├── components/
+│   └── ...
+│
+├── constants/
+│   └── ...
+│
+├── data/
+│   └── marketplace.ts
+│
+└── hooks/
+    └── ...
+🛠️ Tech Stack
+React Native
+Expo
+Expo Router
+TypeScript
+React Hooks
+Ionicons
+Responsive React Native layouts
+📦 Data Handling
+
+Marketplace product information is maintained separately from the UI layer in:
+
+src/data/marketplace.ts
+
+This keeps product data, categories and marketplace-related information separate from screen components and makes the implementation easier to maintain and extend.
+
+The current project uses mock marketplace data for demonstration purposes.
+
+🎨 UI & UX
+
+The interface is designed with a focus on:
+
+Simple and clean visual hierarchy
+Consistent spacing and typography
+Touch-friendly controls
+Responsive layouts
+Clear product information
+Easy EMI selection
+Straightforward checkout flow
+Consistent navigation between screens
+
+The implementation follows the visual direction of the 1Fi Shop / Marketplace experience while keeping the assignment focused specifically on the Marketplace functionality.
+
+📱 Responsive Design
+
+The marketplace adapts its product layout based on available screen width.
+
+Mobile screens use a single-column product layout.
+Wider screens use a two-column product layout.
+Search and category sections remain accessible on smaller screens.
+Product and checkout interfaces are designed to remain touch-friendly.
+⚡ Getting Started
+Prerequisites
+
+Make sure you have the following installed:
+
+Node.js
+npm
+Expo-compatible development environment
+Expo Go app for physical device testing, if required
+Installation
+
+Clone the repository:
+
+git clone https://github.com/umangkumar612/SDE-Intern-Assignment-1Fi.git
+
+Move into the project directory:
+
+cd SDE-Intern-Assignment-1Fi
+
+Install dependencies:
+
+npm install
+
+Start the Expo development server:
+
+npm start
+
+You can then open the application using:
+
+Expo Go
+Android Emulator
+iOS Simulator
+Web browser
+🔍 Key Implementation Highlights
+Search & Filtering
+
+Products can be searched by name and filtered using marketplace categories.
+
+Dynamic EMI Calculation
+
+The selected EMI tenure is used to calculate the displayed monthly EMI based on the product price.
+
+Monthly EMI = Product Price ÷ Selected Tenure
+
+The implementation is intended as a frontend demonstration and does not represent an actual financial calculation or lending offer.
+
+Reusable Data Layer
+
+Marketplace-related data is maintained independently from the presentation layer, making it easier to replace the mock data with a real API in the future.
+
+Navigation
+
+Expo Router is used to handle navigation between marketplace, product details, checkout, payment and success screens.
+
+🔐 Payment Disclaimer
+
+The checkout and payment screens in this assignment are UI demonstrations only.
+
+No real payment transaction, banking integration, mutual fund transaction, or financial service is performed by the application.
+
+📌 Assignment Scope
+
+This implementation focuses specifically on the 1Fi Marketplace requirement.
+
+The project includes:
+
+Marketplace listing
+Product details
+Product variants
+EMI selection
+EMI-based purchase flow
+Checkout interface
+Payment interface
+Payment success confirmation
+
+The implementation intentionally keeps the scope focused instead of recreating the complete 1Fi application.
+
+📈 Future Improvements
+
+If this were extended beyond the assignment scope, the following could be added:
+
+Real marketplace API integration
+Backend product management
+Real-time inventory
+Authentication
+User profile and order history
+Real payment gateway integration
+Real EMI eligibility and financial calculations
+API-based loading, retry and error handling
+Product pagination
+Wishlist and cart functionality
+👨‍💻 Developer
+
+Umang Kumar Kataria
+
+B.Tech — Computer Science & Engineering
+
+Full Stack Developer
+
+Connect
+GitHub: https://github.com/umangkumar612
+LinkedIn: https://www.linkedin.com/in/umang-kumar-kataria-193ab227/
+Portfolio: https://portfolioumangkumar.netlify.app
+📄 License
+
+This project was created for the 1Fi SDE Intern assignment and is intended for demonstration and evaluation purposes.
